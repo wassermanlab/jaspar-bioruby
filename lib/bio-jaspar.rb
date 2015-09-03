@@ -8,5 +8,8 @@
 #
 # In this file only require other files. Avoid other source code.
 
+require 'bio-jaspar/motifs.rb'
+require 'bio-jaspar/matrix.rb'
+require 'bio-jaspar/thresholds.rb'
 require 'bio-jaspar/jaspar.rb'
-
+require 'bio-jaspar/db.rb'

@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bio-jaspar"
   gem.homepage = "http://github.com/leejae8/bioruby-jaspar"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Tools for JASPAR motifs in BioRuby}
+  gem.description = %Q{Basic tools for parsing, searching, and comparing JASPAR motifs; Based on Bio.motifs module in Biopython}
   gem.email = "leejae7@interchange.ubc.ca"
   gem.authors = ["Jessica Lee"]
   # dependencies defined in Gemfile
@@ -32,12 +32,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-desc "Code coverage detail"
-task :simplecov do
-  ENV['COVERAGE'] = "true"
-  Rake::Task['test'].execute
-end
-
 task :default => :test
 
 require 'rdoc/task'
@@ -48,4 +42,5 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "bio-jaspar #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.main = "README.rdoc"
 end
